@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>電影座位指引</title>
+</head>
+<body>
+    <h1>電影座位指引</h1>
+    <div id="seatInfo"></div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const seatId = urlParams.get('id');
+        const seatInfo = document.getElementById('seatInfo');
+        seatInfo.innerText = seatId ? `您的座位號碼為: ${seatId}` : "未指定座位號碼";
+    </script>
+</body>
+</html>
